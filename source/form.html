@@ -11,9 +11,75 @@
     <a class="page-header__logo">
       <img class="page-header__logo-image" src="https://via.placeholder.com/86x35.png/35a999/FFFFFF/?text=Mishka-logo.svg" width="86" height="35" alt="Логотип магазина Mishka">
     </a>
-    <button class="page-header__menu-button"></button>
+    <button type="button" class="page-header__menu-button"></button>
+    <ul class="main-menu">
+      <li class="main-menu__item">
+        <a class="main-menu__link" href="catalog.html">Каталог товаров</a>
+      </li>
+      <li class="main-menu__item">
+        <a class="main-menu__link" href="form.html">Вязание на заказ</a>
+      </li>
+      <li class="main-menu__item">
+        <a class="main-menu__link main-menu__link--search" href="#">Поиск по сайту</a>
+      </li>
+      <li class="main-menu__item">
+        <a class="main-menu__link main-menu__link--cart" href="#">Корзина: пока пуста</a>
+      </li>
+    </ul>
   </header>
-  <main class="page-main"></main>
+  <main class="page-main">
+    <header class="intro">
+      <h1 class="intro__header">Вязание на заказ</h1>
+    </header>
+    <p class="page-lead">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
+    <form class="custom-order-form" action="https://echo.htmlacademy.ru" method="post">
+      <fieldset class="custom-order-form__fieldset">
+        <legend class="custom-order-form__legend">Тип</legend>
+        <input class="visually-hidden" type="radio" name="order-type" value="accessory" id="accessory">
+        <label class="custom-order-form__control custom-order-form__control--radio" for="accessory">Аксессуар для интерьера</label>
+        <input class="visually-hidden" type="radio" name="order-type" value="toy" id="toy">
+        <label class="custom-order-form__control custom-order-form__control--radio" for="toy">Аксессуар для интерьера</label>
+      </fieldset>
+      <fieldset class="custom-order-form__fieldset">
+        <legend class="custom-order-form__legend">Цвет</legend>
+        <input class="visually-hidden" type="checkbox" name="white" id="white">
+        <label class="custom-order-form__control custom-order-form__control--checkbox" for="white">Белый</label>
+        <input class="visually-hidden" type="checkbox" name="white" id="grey">
+        <label class="custom-order-form__control custom-order-form__control--checkbox" for="grey">Серый</label>
+        <input class="visually-hidden" type="checkbox" name="white" id="tiffany">
+        <label class="custom-order-form__control custom-order-form__control--checkbox" for="tiffany">&laquo;Тиффани&raquo;</label>
+        <input class="visually-hidden" type="checkbox" name="white" id="black">
+        <label class="custom-order-form__control custom-order-form__control--checkbox" for="black">Чёрный</label>
+        <input class="visually-hidden" type="checkbox" name="white" id="pink">
+        <label class="custom-order-form__control custom-order-form__control--checkbox" for="pink">Розовый</label>
+        <input class="visually-hidden" type="checkbox" name="white" id="orange">
+        <label class="custom-order-form__control custom-order-form__control--checkbox" for="orange">Оранжевый</label>
+      </fieldset>
+      <fieldset class="custom-order-form__fieldset">
+        <legend class="custom-order-form__legend">ФИО</legend>
+        <label class="custom-order-form__label custom-order-form__label--text" for="first-name">Имя</label>
+        <input class="custom-order-form__control custom-order-form__control--text" type="text" name="first-name" id="first-name" placeholder="Введите ваше имя*" required>
+        <label class="custom-order-form__label custom-order-form__label--text" for="last-name">Фамилия</label>
+        <input class="custom-order-form__control custom-order-form__control--text" type="text" name="last-name" id="last-name" placeholder="Укажите фамилию*" required>
+        <label class="custom-order-form__label custom-order-form__label--text" for="patronymic-name">Отчество</label>
+        <input class="custom-order-form__control custom-order-form__control--text" type="text" name="patronymic-name" id="patronymic-name" placeholder="Отчество, если желаете">
+      </fieldset>
+      <fieldset class="custom-order-form__fieldset">
+        <legend class="custom-order-form__legend">Тел</legend>
+        <input class="custom-order-form__control custom-order-form__control--telephone" type="tel" placeholder="+7 XXX XX XX*" required>
+      </fieldset>
+      <fieldset class="custom-order-form__fieldset">
+        <legend class="custom-order-form__legend">Email</legend>
+        <input class="custom-order-form__control custom-order-form__control--email" type="email" placeholder="Ваш Email*" required>
+      </fieldset>
+      <fieldset class="custom-order-form__fieldset">
+        <legend class="custom-order-form__legend">Доп</legend>
+        <textarea class="custom-order-form__control custom-order-form__control--textarea">Опишите все ваши пожелания к заказу</textarea>
+      </fieldset>
+      <p class="custom-order-form__note">*Поля обязательны для заполнения</p>
+      <button class="custom-order-form__control custom-order-form__control--button" type="submit">Отправить заказ</button>
+    </form>
+  </main>
   <footer class="page-footer">
     <div class="page-footer__social social">
       <ul class="social__list">
